@@ -12,6 +12,7 @@ package certifico_exam1;
 
 import java.util.Scanner;
 import java.util.Arrays;
+
 public class Certifico_Exam1 {
     public static Scanner scn = new Scanner(System.in);
     
@@ -58,21 +59,74 @@ public class Certifico_Exam1 {
     }
     
     public static void number1(){
-      int [] arr = {1, -2, 3, -4, 5};
-        System.out.println(Arrays.toString(arr));
+      int [] arr = {1,-2,3,-4,5};
+        System.out.println("Original Array: ");
+        for (int i : arr) {            
+            System.out.println(i + " ");
+        }
+        System.out.println(" ");
+        int sum=0;
+        for (int num : arr) {
+            if (num > 0) {
+                sum+=num;
+                        
+            }
+        }
+        System.out.println("TOTAL OF ALL POSITIVE INTEGERS: " + sum);
     }
     
     public static void number2(){
+          
+    int [] arr = { 12,34,546,78,234,};
+    System.out.println("Original Set of Array: ");
+    printArray(arr);
+    bubbleSort(arr);
+    System.out.println("New Set of Array: ");
+    printArray(arr);
+}
+
+public static void bubbleSort(int [] arr){
+      int n = arr.length;
+        
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - 1 - i; j++) {
+                if (arr [j] > arr [j + 1]) {
+                    int m = arr[j];
+                    arr[j]= arr[j + 1];
+                    arr[j + 1] = m;
+                }
+            }
+        }
+        
+}
+
+public static void printArray(int [] arr){
     
+    for (int num : arr) {
+        System.out.println(num + " ");
     }
+}
+    
     
     public static void number3(){
- 
+         int [] arr = {3,2,1,5,4};
+        
+        Arrays.sort(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
+            if (i<arr.length - 1) {
+            }
+        }
     }
     
     public static void number4(){
-    int [] arr = {1, -2, 3, -4, 5};
-        System.out.println(Arrays.toString(arr));
+    int [] arr = {2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+    
+        for (int i : arr) {
+            if (i % 2 == 0) {
+                System.out.println(i + " " );
+            }
+        }
     }
     
    public static void number5(){
@@ -93,32 +147,11 @@ public class Certifico_Exam1 {
         } else if (n == 1) {
             return 1;
         } else {
-            return fibonacci(n - 1) + fibonacci(n - 2);
+            return fibonacci(n - 1) + fibonacci(n - 1);
         }
     }
-    
-   
-   
-    public static void bubbleSort(int arrey[]){
-        int n = arrey.length;
-        
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - 1 - i; j++) {
-                if (arrey [j] > arrey [j + 1]) {
-                    int m = arrey[j];
-                    arrey[j]= arrey[j + 1];
-                    arrey[j + 1] = m;
-                    
-                }
-            }
-        }
-        
-    }
-    public static void printArray(int arrey[]){
-        for (int num : arrey) {
-            System.out.println(num + " ");
-        }
-    } 
+ 
+     
 
     private static int userChoice(int min, int max) {
         int choice;
@@ -133,5 +166,3 @@ public class Certifico_Exam1 {
         return choice;
     }
     }
-    
-

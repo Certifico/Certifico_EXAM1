@@ -14,18 +14,12 @@ import java.util.Scanner;
 import java.util.Arrays;
 //NUMBER 2
 public class number2 {
-   
-    private static int apple = 1 , banana = 2, durian = 3, kiwi = 4, lanzones = 5, mansanitas = 6, rambotan = 7 ;
-    
+        
 public static void main(String[]args ){
+    Scanner scn = new Scanner(System.in);
+    System.out.println("Set a Set of Array: ");
+    int result = scn.nextInt();
     
-    int [] arr = { banana, apple, lanzones, durian, rambotan, kiwi, mansanitas};
-    System.out.println("Original Set of Array: ");
-    printArray(arr);
-    
-    bubbleSort(arr);
-    System.out.println("New Set of Array: ");
-    printArray(arr);
 }
 
 public static void bubbleSort(int [] arr){
@@ -50,5 +44,4 @@ public static void printArray(int [] arr){
         System.out.println(num + " ");
     }
 }
-
 }
